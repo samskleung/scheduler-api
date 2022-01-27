@@ -14,6 +14,9 @@ const days = require("./routes/days");
 const appointments = require("./routes/appointments");
 const interviewers = require("./routes/interviewers");
 
+var morgan = require('morgan')
+app.use(morgan('common'));
+
 function read(file) {
   return new Promise((resolve, reject) => {
     fs.readFile(
